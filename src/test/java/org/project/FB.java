@@ -28,6 +28,7 @@ public class FB extends BaseClass{
 	@When("click login button")
 	public void click_login_button() {
 		LoginPage log = manager.getloginPage();
+		highlight(log.getButton());
 		clickIt(log.getButton());
 	}
 	@When("navigate back to previous url")
@@ -38,6 +39,7 @@ public class FB extends BaseClass{
 	@When("click the forgotButton")
 	public void click_the_forgot_button() {
 	   ForgotPage forgot = manager.getForgetPage();
+	   highlight(forgot.getForgotButton());
 	   clickIt(forgot.getForgotButton());
 	}
 
@@ -45,11 +47,13 @@ public class FB extends BaseClass{
 	@When("click the create page button")
 	public void click_the_create_page_button() {
 	    CreatePage page = manager.getCreatePage();
+	    highlight(page.getPage());
 	    clickIt(page.getPage());
 	}
 	@When("choose the community")
 	public void choose_the_community() {
 		CreatePage page = manager.getCreatePage();
+		highlight(page.getCommunity());
 		clickIt(page.getCommunity());
 	}
 	@Then("back to login page")
