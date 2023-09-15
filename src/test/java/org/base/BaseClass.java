@@ -63,7 +63,7 @@ public class BaseClass {
 	}
 	public void highlight(WebElement element) {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("arguments[0].setAttribute('style','border: 3px solid black');",element);
+		js.executeScript("arguments[0].setAttribute('style','border: 3px solid red');",element);
 	}
 	
 	
